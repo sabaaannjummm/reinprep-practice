@@ -1,7 +1,8 @@
 import tkinter as tk
-from tkinter import scrolledtext          
+from tkinter import scrolledtext
 
 # Define the Broadcast class
+
 class Broadcast:
     def __init__(self, event_id, event_name, timing, channel, location, duration):
         self.event_id = event_id # unique ID for the event
@@ -11,7 +12,7 @@ class Broadcast:
         self.location = location  # location of the event (e.g., stadium)
         self.duration = duration  # duration of the event (e.g., 2 hours)
         self.rights = None  # Rights information (if applicable)
-    
+        
     def __str__(self):
         return (f"Broadcast(ID: {self.event_id}, Event: {self.event_name}, Time: {self.timing}, "
                 f"Channel: {self.channel}, Location: {self.location}, Duration: {self.duration}, "
@@ -21,7 +22,7 @@ class Broadcast:
 class BroadcastManager:
     def __init__(self):
         self.broadcasts = {}
-
+          
     # Add a new broadcast
     def add_broadcast(self, event_id, event_name, timing, channel, location, duration):
         if event_id in self.broadcasts:
@@ -58,9 +59,7 @@ class BroadcastManager:
         else:
             return f"Broadcast with event ID {event_id} not found."
 
-
-
-# Initialize Broadcast Manager
+#Initialize Broadcast Manager
 manager = BroadcastManager()
 
 # --- Tkinter GUI Setup ---
